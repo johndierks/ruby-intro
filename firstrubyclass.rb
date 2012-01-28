@@ -8,5 +8,8 @@ class FirstRubyClass
    (start_number..end_number).each{ |x| puts x}
   end
   
+  def add_these(first, second)
+    first+second
+  end
   
 end
