@@ -1,4 +1,7 @@
 class FirstRubyClass
+
+  DEVELOPERS_NAME = "John Dierks"
+
   def current_date
     require 'date'
     puts Date.today.to_s
