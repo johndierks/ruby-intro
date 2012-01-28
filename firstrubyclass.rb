@@ -15,4 +15,8 @@ class FirstRubyClass
     first+second
   end
   
+  def string_contained_within?(full_string, check_string)
+    full_string.include? check_string
+  end
+  
 end
