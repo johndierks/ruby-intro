@@ -41,4 +41,9 @@ class FirstRubyClass
     end
   end
   
+  def save_latest_tweet_to_file
+    require "Twitter"
+    File.open('latest-tweet.txt', 'w') {|f| f.write(Twitter.user_timeline("jdierks").first.text) }
+  end
+  
 end
