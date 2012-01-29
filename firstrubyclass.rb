@@ -19,4 +19,12 @@ class FirstRubyClass
     full_string.include? check_string
   end
   
+  def print_range(first,last)
+    for i in first..last
+      puts i
+      yield if block_given?
+    end
+  end  
+  
+  
 end
