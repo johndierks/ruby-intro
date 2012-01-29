@@ -2,31 +2,31 @@ class FirstRubyClass
 
   DEVELOPERS_NAME = "John Dierks"
 
-  def current_date
+  def FirstRubyClass.current_date
     require 'date'
     puts Date.today.to_s
   end
   
-  def print_array(start_number = 1, end_number = 1000)
+  def FirstRubyClass.print_array(start_number = 1, end_number = 1000)
    (start_number..end_number).each{ |x| puts x}
   end
   
-  def add_these(first, second)
+  def FirstRubyClass.add_these(first, second)
     first+second
   end
   
-  def string_contained_within?(full_string, check_string)
+  def FirstRubyClass.string_contained_within?(full_string, check_string)
     full_string.include? check_string
   end
   
-  def print_range(first,last)
+  def FirstRubyClass.print_range(first,last)
     for i in first..last
       puts i
       yield if block_given?
     end
   end  
   
-  def fibonacci(length)
+  def FirstRubyClass.fibonacci(length)
     fib_array = []
     
     for i in 0..length
@@ -41,7 +41,8 @@ class FirstRubyClass
     end
   end
   
-  def save_latest_tweet_to_file
+  #this method requires the Twitter gem.
+  def FirstRubyClass.save_latest_tweet_to_file
     require "Twitter"
     File.open('latest-tweet.txt', 'w') {|f| f.write(Twitter.user_timeline("jdierks").first.text) }
   end
